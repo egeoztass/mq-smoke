@@ -1,1 +1,1 @@
-export const greet = (name) => `Hello, ${name}`;
+export const greet = (name) => `Hello, ${String(name).trim()}`;
