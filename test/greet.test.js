@@ -5,3 +5,7 @@ import { greet } from "../src/greet.js";
 test("greets by name", () => {
   assert.equal(greet("Ada"), "Hello, Ada");
 });
+
+test("trims surrounding whitespace from the name", () => {
+  assert.equal(greet("  Ada "), "Hello, Ada");
+});
