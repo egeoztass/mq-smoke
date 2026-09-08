@@ -1,1 +1,5 @@
-export const greet = (name) => `Hello, ${String(name).trim()}`;
+export const greet = (name) => {
+  const trimmed = String(name ?? "").trim();
+  if (!trimmed) throw new TypeError("name is required");
+  return `Hello, ${trimmed}`;
+};

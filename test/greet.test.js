@@ -9,3 +9,7 @@ test("greets by name", () => {
 test("trims surrounding whitespace from the name", () => {
   assert.equal(greet("  Ada "), "Hello, Ada");
 });
+
+test("rejects an empty name", () => {
+  assert.throws(() => greet("   "), { name: "TypeError", message: "name is required" });
+});
