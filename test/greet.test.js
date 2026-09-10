@@ -17,3 +17,11 @@ test("rejects an empty name", () => {
 test("capitalises the first letter of the name", () => {
   assert.equal(greet("ada"), "Hello, Ada");
 });
+
+test("greets a list of names", () => {
+  assert.equal(greet(["Ada", "Grace"]), "Hello, Ada and Grace");
+});
+
+test("rejects an empty list of names", () => {
+  assert.throws(() => greet([]), { name: "TypeError", message: "name is required" });
+});
